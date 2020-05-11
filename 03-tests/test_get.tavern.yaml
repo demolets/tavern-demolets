@@ -1,0 +1,25 @@
+---
+test_name: get
+stages:
+  - name: get
+    request:
+      method: GET
+      url: "https://postman-echo.com/get"
+    response:
+      status_code:
+        - 200
+
+---
+test_name: get_foo
+stages:
+  - name: get_foo
+    request:
+      method: GET
+      url: "https://postman-echo.com/get?foo=bar"
+    response:
+      status_code: 200
+      json: 
+        url: !anything
+        headers: !anything
+        args:
+          foo: "bar"
