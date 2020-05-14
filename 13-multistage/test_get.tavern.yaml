@@ -1,0 +1,35 @@
+---
+test_name: get_bar_from_account
+stages:
+  - name: get_account_value
+    request:
+      method: GET
+      url: "https://postman-echo.com/get?account=bar"
+    response:
+      status_code: 200
+      save:
+        json:
+          account_data: args.account
+
+  - name: get_match_account_data_with_foo
+    request:
+      method: GET
+      url: "https://postman-echo.com/get?foo={account_data}"
+    response:
+      status_code: 200
+      json:
+        args:
+          foo: "bar"
+
+  - name: post_match_account_data_with_foo
+    request:
+      method: POST
+      url: "https://postman-echo.com/post"
+      data:
+        foo: "{account_data}"
+    response:
+      status_code: 200
+      json:
+        form:
+          foo: "bar"
+      

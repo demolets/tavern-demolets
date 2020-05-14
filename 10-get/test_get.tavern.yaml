@@ -1,0 +1,35 @@
+---
+test_name: get
+stages:
+  - name: get
+    request:
+      method: GET
+      url: "https://postman-echo.com/get"
+    response:
+      status_code:
+        - 200
+
+---
+test_name: get_basic_auth
+stages:
+  - name: get_basic_auth
+    request:
+      method: GET
+      url: "https://postman-echo.com/basic-auth"
+      auth:
+        - postman
+        - password
+    response:
+      status_code: 200
+
+---
+test_name: get_custom_headers_auth
+stages:
+  - name: get_custom_headers_auth
+    request:
+      method: GET
+      url: "https://postman-echo.com/basic-auth"
+      headers:
+        Authorization: Basic cG9zdG1hbjpwYXNzd29yZA==
+    response:
+      status_code: 200

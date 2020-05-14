@@ -1,0 +1,18 @@
+{
+  'args': 
+  {
+    'account': 'bar'
+  }, 
+  'headers': 
+  {
+    'x-forwarded-proto': 'https', 
+    'x-forwarded-port': '443', 
+    'host': 'postman-echo.com', 
+    'x-amzn-trace-id': 'Root=1-5ebc875e-c8e14ad6502dffa012681712', 
+    'user-agent': 'python-requests/2.23.0', 
+    'accept-encoding': 'gzip, deflate', 
+    'accept': '*/*'
+  }, 
+  'url': 'https://postman-echo.com/get?account=bar'
+}
+

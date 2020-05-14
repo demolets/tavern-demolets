@@ -1,7 +1,10 @@
 # Get
 
 
-Check is website is up and returns `200`:
+Check if website is up and returns `200`.  The included tests are:
+  - just GET
+  - GET with basic auth
+  - GET with custom headers
 
 ```
 tavern-ci test_get.tavern.yaml
